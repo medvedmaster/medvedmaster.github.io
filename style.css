@@ -377,4 +377,26 @@ body {
         color: #2d3748 !important;
         transform: none !important;
     }
+    /* Стили для фото аватарки */
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.avatar-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .avatar-img {
+        width: 90px;
+        height: 90px;
+    }
 }
