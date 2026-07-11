@@ -28,5 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // === КНОПКА "СКАЧАТЬ ДИПЛОМ" ===
+    const diplomaBtn = document.querySelector('.btn-diploma');
+    if (diplomaBtn) {
+        diplomaBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Создаем ссылку для скачивания
+            const link = document.createElement('a');
+            link.href = 'diploma.pdf';
+            link.download = 'Диплом_Харламов_Михаил.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+
     console.log('Резюме загружено! 🚀');
 });

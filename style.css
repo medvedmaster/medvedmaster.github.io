@@ -290,6 +290,15 @@ body {
     color: #718096;
 }
 
+/* Контейнер для кнопок в футере */
+.footer-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Кнопка "Сохранить в PDF" */
 .btn-print {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
@@ -307,6 +316,28 @@ body {
 .btn-print:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Кнопка "Скачать диплом" */
+.btn-diploma {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-diploma:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
 }
 
 /* Адаптивность */
@@ -342,6 +373,17 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    .footer-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .btn-diploma,
+    .btn-print {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Стили для печати / PDF */
@@ -356,8 +398,9 @@ body {
         border-radius: 0;
     }
     
-    .btn-print {
-        display: none;
+    .btn-print,
+    .btn-diploma {
+        display: none !important;
     }
     
     .header {
@@ -377,7 +420,9 @@ body {
         color: #2d3748 !important;
         transform: none !important;
     }
-    /* Стили для фото аватарки */
+}
+
+/* Стили для фото аватарки */
 .avatar-img {
     width: 120px;
     height: 120px;
@@ -399,5 +444,4 @@ body {
         width: 90px;
         height: 90px;
     }
-}
 }
